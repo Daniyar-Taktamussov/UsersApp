@@ -1,0 +1,30 @@
+﻿<Page x:Class="UsersApp.Page2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsersApp"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="SklepObuwie" Height="600" Width="1000">
+    <Grid Name="MainFrame" Background="Pink">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="60" Color="DarkGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Authorization" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" Foreground="DarkBlue" />
+
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Registration" Height="32" VerticalAlignment="Top" />
+                    <Button Click="But2_Click" x:Name="But1" HorizontalAlignment="Right" Content="sign up" Style="{StaticResource MaterialDesignFlatButton}"/>
+                </Grid>
+
+                <TextBox materialDesign:HintAssist.Hint="Enter login" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <PasswordBox materialDesign:HintAssist.Hint="Enter password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Cursor="Arrow" />
+                <Button Content="Sign in" Margin="0 20"/>
+                <Button x:Name="escButton" Content="Exit" Click="escButton_Click" Background="red"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
